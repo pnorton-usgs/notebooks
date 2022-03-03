@@ -1,0 +1,323 @@
+,description,units,dimensions,coordinates,datatype
+ACDEWC,acccumlated QDEWC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACDRIPR,acccumlated QDRIPR,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACDRIPS,acccumlated QDRIPS,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACECAN,acccumlated ECAN,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEDIR,acccumlated EDIR,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEFLXB,acccumlated EFLXB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACETLSM,acccumlated ET,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACETRAN,acccumlated ETRAN,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEVAC,acccumlated QEVAC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEVB,acccumlated EVB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEVC,acccumlated EVC,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACEVG,acccumlated EVG,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACFROC,acccumlated QFROC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACFRZC,acccumlated QFRZC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACGHB,acccumlated GHB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACGHFLSM,acccumlated total ground heat flux,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACGHV,acccumlated GHV,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACGRDFLX,ACCUMULATED GROUND HEAT FLUX,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACHFX,ACCUMULATED UPWARD HEAT FLUX AT THE SURFACE,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACINTR,acccumlated QINTR,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACINTS,acccumlated QINTS,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACIRB,acccumlated IRB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACIRC,acccumlated IRC,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACIRG,acccumlated IRG,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLHF,ACCUMULATED UPWARD LATENT HEAT FLUX AT THE SURFACE,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLHFLSM,acccumlated total latent heat flux,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWDNB,ACCUMULATED DOWNWELLING LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWDNBC,ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWDNLSM,acccumlated LWDN,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWDNT,ACCUMULATED DOWNWELLING LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWDNTC,ACCUMULATED DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWUPB,ACCUMULATED UPWELLING LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWUPBC,ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWUPLSM,acccumlated LWUP,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWUPT,ACCUMULATED UPWELLING LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACLWUPTC,ACCUMULATED UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACMELTC,acccumlated QMELTC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACPAHB,acccumlated PAHB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACPAHG,acccumlated PAHG,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACPAHLSM,acccumlated total precip heat flux,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACPAHV,acccumlated PAHV,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACPONDING,acccumlated PONDING,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACQLAT,accumulated lateral flow,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACQRF,accumulated baseflow,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACRAINLSM,acccumlated RAINLSM,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACRAINSNOW,acccumlated rain on snow pack,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACRUNSB,acccumlated RUNSF,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACRUNSF,acccumlated RUNSB,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSAGB,acccumlated SAG under vegetation,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSAGV,acccumlated SAG in bare section,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSAV,acccumlated SAV,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSHB,acccumlated SHB,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSHC,acccumlated SHC,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSHFLSM,acccumlated total sensible heat flux,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSHG,acccumlated SHG,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSNBOT,acccumlated QSNBOT,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSNFRO,acccumlated QSNFRO,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSNOM,ACCUMULATED MELTED SNOW,kg m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSNOWLSM,acccumlated SNOWLSM,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSNSUB,acccumlated QSNSUB,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSUBC,acccumlated QSUBC,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWDNB,ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWDNBC,ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWDNLSM,acccumlated SWDN,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWDNT,ACCUMULATED DOWNWELLING SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWDNTC,ACCUMULATED DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWUPB,ACCUMULATED UPWELLING SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWUPBC,ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWUPLSM,acccumlated SWUP,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWUPT,ACCUMULATED UPWELLING SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACSWUPTC,ACCUMULATED UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+ACTHROR,acccumlated QTHROR,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACTHROS,acccumlated QTHROS,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+ACTR,acccumlated TR,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+ALBBCK,BACKGROUND ALBEDO,,Time south_north west_east,XLONG XLAT XTIME,float32
+ALBEDO,ALBEDO,-,Time south_north west_east,XLONG XLAT XTIME,float32
+BF,"full levels, bf=0 => isobaric; bf=znw => sigma",Dimensionless,Time bottom_top_stag,,float32
+BH,"half levels, bh=0 => isobaric; bh=znu => sigma",Dimensionless,Time bottom_top,,float32
+C1F,"full levels, c1f = d bf / d eta, using znu",Dimensionless,Time bottom_top_stag,,float32
+C1H,"half levels, c1h = d bf / d eta, using znw",Dimensionless,Time bottom_top,,float32
+C2F,"full levels, c2f = (1-c1f)*(p0-pt)",Pa,Time bottom_top_stag,,float32
+C2H,"half levels, c2h = (1-c1h)*(p0-pt)",Pa,Time bottom_top,,float32
+C3F,"full levels, c3f = bf",Dimensionless,Time bottom_top_stag,,float32
+C3H,"half levels, c3h = bh",Dimensionless,Time bottom_top,,float32
+C4F,"full levels, c4f = (eta-bf)*(p0-pt)+pt, using znw",Pa,Time bottom_top_stag,,float32
+C4H,"half levels, c4h = (eta-bh)*(p0-pt)+pt, using znu",Pa,Time bottom_top,,float32
+CANICE,intercepted ice mass,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+CANWAT,CANOPY WATER,kg m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+CF1,2nd order extrapolation constant,,Time,,float32
+CF2,2nd order extrapolation constant,,Time,,float32
+CF3,2nd order extrapolation constant,,Time,,float32
+CFN,extrapolation constant,,Time,,float32
+CFN1,extrapolation constant,,Time,,float32
+CLAT,"COMPUTATIONAL GRID LATITUDE, SOUTH IS NEGATIVE",degree_north,Time south_north west_east,XLONG XLAT XTIME,float32
+CLDFRA,CLOUD FRACTION,,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+COSALPHA,Local cosine of map rotation,,Time south_north west_east,XLONG XLAT XTIME,float32
+COSZEN,COS of SOLAR ZENITH ANGLE,dimensionless,Time south_north west_east,XLONG XLAT XTIME,float32
+DN,d(eta) values between half (mass) levels,,Time bottom_top,,float32
+DNW,d(eta) values between full (w) levels,,Time bottom_top,,float32
+DZS,THICKNESSES OF SOIL LAYERS,m,Time soil_layers_stag,,float32
+E,Coriolis cosine latitude term,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+EMISS,SURFACE EMISSIVITY,,Time south_north west_east,XLONG XLAT XTIME,float32
+F,Coriolis sine latitude term,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+FNM,upper weight for vertical stretching,,Time bottom_top,,float32
+FNP,lower weight for vertical stretching,,Time bottom_top,,float32
+FORCPLSM,lowest model P into LSM,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+FORCQLSM,lowest model Q into LSM,kg/kg,Time south_north west_east,XLONG XLAT XTIME,float32
+FORCTLSM,lowest model T into LSM,K,Time south_north west_east,XLONG XLAT XTIME,float32
+FORCWLSM,lowest model wind speed into LSM,m/s,Time south_north west_east,XLONG XLAT XTIME,float32
+FORCZLSM,lowest model Z into LSM,m,Time south_north west_east,XLONG XLAT XTIME,float32
+GLW,DOWNWARD LONG WAVE FLUX AT GROUND SURFACE,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+GRAUPELNC,ACCUMULATED TOTAL GRID SCALE GRAUPEL,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+GRAUPEL_ACC_NC,ACCUMULATED GRAUPEL WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+GRDFLX,GROUND HEAT FLUX,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+GRPL_MAX,MAX COL INT GRAUPEL,kg m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+HAILNC,ACCUMULATED TOTAL GRID SCALE HAIL,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+HAIL_MAX2D,MAX HAIL DIAMETER ENTIRE COLUMN,m,Time south_north west_east,XLONG XLAT XTIME,float32
+HAIL_MAXK1,MAX HAIL DIAMETER K=1,m,Time south_north west_east,XLONG XLAT XTIME,float32
+HFX,UPWARD HEAT FLUX AT THE SURFACE,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+HFX_FORCE,SCM ideal surface sensible heat flux,W m-2,Time,,float32
+HFX_FORCE_TEND,SCM ideal surface sensible heat flux tendency,W m-2 s-1,Time,,float32
+HGT,Terrain Height,m,Time south_north west_east,XLONG XLAT XTIME,float32
+ISEEDARRAY_SPP_CONV,"Array to hold seed for restart, RAND_PERT2",,Time bottom_top,,int32
+ISEEDARRAY_SPP_LSM,"Array to hold seed for restart, RAND_PERT4",,Time bottom_top,,int32
+ISEEDARRAY_SPP_PBL,"Array to hold seed for restart, RAND_PERT3",,Time bottom_top,,int32
+ISEEDARR_RAND_PERTURB,"Array to hold seed for restart, RAND_PERT",,Time bottom_top,,int32
+ISEEDARR_SKEBS,"Array to hold seed for restart, SKEBS",,Time bottom_top,,int32
+ISEEDARR_SPPT,"Array to hold seed for restart, SPPT",,Time bottom_top,,int32
+ISLTYP,DOMINANT SOIL CATEGORY,,Time south_north west_east,XLONG XLAT XTIME,int32
+ITIMESTEP,,,Time,,int32
+IVGTYP,DOMINANT VEGETATION CATEGORY,,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWDNB,BUCKET FOR DOWNWELLING LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWDNBC,BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWDNT,BUCKET FOR DOWNWELLING LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWDNTC,BUCKET FOR DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWUPB,BUCKET FOR UPWELLING LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWUPBC,BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWUPT,BUCKET FOR UPWELLING LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACLWUPTC,BUCKET FOR UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWDNB,BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWDNBC,BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWDNT,BUCKET FOR DOWNWELLING SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWDNTC,BUCKET FOR DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWUPB,BUCKET FOR UPWELLING SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWUPBC,BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWUPT,BUCKET FOR UPWELLING SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_ACSWUPTC,BUCKET FOR UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,J m-2,Time south_north west_east,XLONG XLAT XTIME,int32
+I_RAINC,BUCKET FOR RAINC,,Time south_north west_east,XLONG XLAT XTIME,int32
+I_RAINNC,BUCKET FOR RAINNC,,Time south_north west_east,XLONG XLAT XTIME,int32
+LAI,LEAF AREA INDEX,m-2/m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LAKEMASK,"LAKE MASK (1 FOR LAKE, 0 FOR NON-LAKE)",,Time south_north west_east,XLONG XLAT XTIME,float32
+LANDMASK,"LAND MASK (1 FOR LAND, 0 FOR WATER)",,Time south_north west_east,XLONG XLAT XTIME,float32
+LH,LATENT HEAT FLUX AT THE SURFACE,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LH_FORCE,SCM ideal surface latent heat flux,W m-2,Time,,float32
+LH_FORCE_TEND,SCM ideal surface latent heat flux tendency,W m-2 s-1,Time,,float32
+LU_INDEX,LAND USE CATEGORY,,Time south_north west_east,XLONG XLAT XTIME,float32
+LWDNB,INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWDNBC,INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWDNT,INSTANTANEOUS DOWNWELLING LONGWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWDNTC,INSTANTANEOUS DOWNWELLING CLEAR SKY LONGWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWUPB,INSTANTANEOUS UPWELLING LONGWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWUPBC,INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWUPT,INSTANTANEOUS UPWELLING LONGWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+LWUPTC,INSTANTANEOUS UPWELLING CLEAR SKY LONGWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+MAPFAC_M,Map scale factor on mass grid,,Time south_north west_east,XLONG XLAT XTIME,float32
+MAPFAC_MX,"Map scale factor on mass grid, x direction",,Time south_north west_east,XLONG XLAT XTIME,float32
+MAPFAC_MY,"Map scale factor on mass grid, y direction",,Time south_north west_east,XLONG XLAT XTIME,float32
+MAPFAC_U,Map scale factor on u-grid,,Time south_north west_east_stag,XLONG_U XLAT_U XTIME,float32
+MAPFAC_UX,"Map scale factor on u-grid, x direction",,Time south_north west_east_stag,XLONG_U XLAT_U XTIME,float32
+MAPFAC_UY,"Map scale factor on u-grid, y direction",,Time south_north west_east_stag,XLONG_U XLAT_U XTIME,float32
+MAPFAC_V,Map scale factor on v-grid,,Time south_north_stag west_east,XLONG_V XLAT_V XTIME,float32
+MAPFAC_VX,"Map scale factor on v-grid, x direction",,Time south_north_stag west_east,XLONG_V XLAT_V XTIME,float32
+MAPFAC_VY,"Map scale factor on v-grid, y direction",,Time south_north_stag west_east,XLONG_V XLAT_V XTIME,float32
+MAX_MSTFX,Max map factor in domain,,Time,,float32
+MAX_MSTFY,Max map factor in domain,,Time,,float32
+MF_VX_INV,"Inverse map scale factor on v-grid, x direction",,Time south_north_stag west_east,XLONG_V XLAT_V XTIME,float32
+MLCAPE,MIXED-LAYER CAPE,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+MLCINH,MIXED-LAYER CINH,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+MLLCL,MIXED-LAYER LCL,m,Time south_north west_east,XLONG XLAT XTIME,float32
+MU,perturbation dry air mass in column,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+MUB,base state dry air mass in column,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+MUCAPE,MOST-UNSTABLE CAPE,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+MUCINH,MOST-UNSTABLE CINH,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+MULCL,MOST-UNSTABLE LCL,m,Time south_north west_east,XLONG XLAT XTIME,float32
+NEST_POS,-,-,Time south_north west_east,XLONG XLAT XTIME,float32
+NOAHRES,RESIDUAL OF THE NOAH SURFACE ENERGY BUDGET,W m{-2},Time south_north west_east,XLONG XLAT XTIME,float32
+O3RAD,RADIATION 3D OZONE,ppmv,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+OLR,TOA OUTGOING LONG WAVE,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+P,perturbation pressure,Pa,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+P00,BASE STATE PRESURE,Pa,Time,,float32
+PB,BASE STATE PRESSURE,Pa,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+PBLH,PBL HEIGHT,m,Time south_north west_east,XLONG XLAT XTIME,float32
+PC,perturbation dry air mass in column,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+PCB,base state dry air mass in column,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+PH,perturbation geopotential,m2 s-2,Time bottom_top_stag south_north west_east,XLONG XLAT XTIME,float32
+PHB,base-state geopotential,m2 s-2,Time bottom_top_stag south_north west_east,XLONG XLAT XTIME,float32
+PREC_ACC_C,ACCUMULATED CUMULUS PRECIPITATION OVER prec_acc_dt PERIODS OF TIME,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+PREC_ACC_NC,ACCUMULATED GRID SCALE  PRECIPITATION OVER prec_acc_dt PERIODS OF TIME,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+PSFC,SFC PRESSURE,Pa,Time south_north west_east,XLONG XLAT XTIME,float32
+P_HYD,hydrostatic pressure,Pa,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+P_STRAT,BASE STATE PRESSURE AT BOTTOM OF STRATOSPHERE,Pa,Time,,float32
+P_TOP,PRESSURE TOP OF THE MODEL,Pa,Time,,float32
+Q2,QV at 2 M,kg kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+QCLOUD,Cloud water mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QFX,UPWARD MOISTURE FLUX AT THE SURFACE,kg m-2 s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+QGRAUP,Graupel mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QICE,Ice mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QNICE,Ice Number concentration,  kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QNRAIN,Rain Number concentration,  kg(-1),Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QRAIN,Rain water mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QRFS,sum baseflow,m,Time south_north west_east,XLONG XLAT XTIME,float32
+QSLAT,sum lateral flow,m,Time south_north west_east,XLONG XLAT XTIME,float32
+QSNOW,Snow mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+QSPRINGS,sum seeping water,m,Time south_north west_east,XLONG XLAT XTIME,float32
+QVAPOR,Water vapor mixing ratio,kg kg-1,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+RAINC,ACCUMULATED TOTAL CUMULUS PRECIPITATION,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+RAINNC,ACCUMULATED TOTAL GRID SCALE PRECIPITATION,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+RAINNCV,TIME-STEP NONCONVECTIVE PRECIPITATION,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+RAINSH,ACCUMULATED SHALLOW CUMULUS PRECIPITATION,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+RDN,inverse d(eta) values between half (mass) levels,,Time bottom_top,,float32
+RDNW,inverse d(eta) values between full (w) levels,,Time bottom_top,,float32
+RDX,INVERSE X GRID LENGTH,,Time,,float32
+RDY,INVERSE Y GRID LENGTH,,Time,,float32
+RECH,sum water table recharge,m,Time south_north west_east,XLONG XLAT XTIME,float32
+REFD_MAX,MAX DERIVED RADAR REFL,dbZ,Time south_north west_east,XLONG XLAT XTIME,float32
+REFL_10CM,Radar reflectivity (lamda = 10 cm),dBZ,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+REFL_1KM_AGL,1KM AGL REFLECTIVITY,dbZ,Time south_north west_east,XLONG XLAT XTIME,float32
+REFL_COM,COMPOSITE REFLECTIVITY,dbZ,Time south_north west_east,XLONG XLAT XTIME,float32
+RESM,TIME WEIGHT CONSTANT FOR SMALL STEPS,,Time,,float32
+SAVE_TOPO_FROM_REAL,1=original topo from real/0=topo modified by WRF,flag,Time,,int32
+SBCAPE,SURFACE-BASED CAPE,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+SBCINH,SURFACE-BASED CINH,J kg-1,Time south_north west_east,XLONG XLAT XTIME,float32
+SBLCL,SURFACE-BASED LCL,m,Time south_north west_east,XLONG XLAT XTIME,float32
+SEAICE,SEA ICE FLAG,,Time south_north west_east,XLONG XLAT XTIME,float32
+SFROFF,SURFACE RUNOFF,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+SH2O,SOIL LIQUID WATER,m3 m-3,Time soil_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+SHDMAX,ANNUAL MAX VEG FRACTION,,Time south_north west_east,XLONG XLAT XTIME,float32
+SHDMIN,ANNUAL MIN VEG FRACTION,,Time south_north west_east,XLONG XLAT XTIME,float32
+SINALPHA,Local sine of map rotation,,Time south_north west_east,XLONG XLAT XTIME,float32
+SMCWTD,deep soil moisture,m3 m-3,Time south_north west_east,XLONG XLAT XTIME,float32
+SMOIS,SOIL MOISTURE,m3 m-3,Time soil_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+SNICE,snow layer ice,mm,Time snow_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+SNLIQ,snow layer liquid,mm,Time snow_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+SNOALB,ANNUAL MAX SNOW ALBEDO IN FRACTION,,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOW,SNOW WATER EQUIVALENT,kg m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOWC,FLAG INDICATING SNOW COVERAGE (1 FOR SNOW COVER),,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOWENERGY,energy content in snow relative to 273.16,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOWH,PHYSICAL SNOW DEPTH,m,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOWNC,ACCUMULATED TOTAL GRID SCALE SNOW AND ICE,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+SNOW_ACC_NC,ACCUMULATED SNOW WATER EQUIVALENT OVER prec_acc_dt PERIODS OF TIME,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+SOILENERGY,energy content in soil relative to 273.16,kJ/m2,Time south_north west_east,XLONG XLAT XTIME,float32
+SR,fraction of frozen precipitation,-,Time south_north west_east,XLONG XLAT XTIME,float32
+SRH01,0-1km storm-relative helicity,m2s-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SRH03,0-3km storm-relative helicity,m2s-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SST,SEA SURFACE TEMPERATURE,K,Time south_north west_east,XLONG XLAT XTIME,float32
+SSTSK,SKIN SEA SURFACE TEMPERATURE,K,Time south_north west_east,XLONG XLAT XTIME,float32
+SST_INPUT,SEA SURFACE TEMPERATURE FROM WRFLOWINPUT FILE,K,Time south_north west_east,XLONG XLAT XTIME,float32
+SWDNB,INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWDNBC,INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWDNT,INSTANTANEOUS DOWNWELLING SHORTWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWDNTC,INSTANTANEOUS DOWNWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWDOWN,DOWNWARD SHORT WAVE FLUX AT GROUND SURFACE,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWNORM,NORMAL SHORT WAVE FLUX AT GROUND SURFACE (SLOPE-DEPENDENT),W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWUPB,INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWUPBC,INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT BOTTOM,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWUPT,INSTANTANEOUS UPWELLING SHORTWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+SWUPTC,INSTANTANEOUS UPWELLING CLEAR SKY SHORTWAVE FLUX AT TOP,W m-2,Time south_north west_east,XLONG XLAT XTIME,float32
+T,perturbation potential temperature (theta-t0),K,Time bottom_top south_north west_east,XLONG XLAT XTIME,float32
+T00,BASE STATE TEMPERATURE,K,Time,,float32
+T2,TEMP at 2 M,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TD2,2-m dewpoint temperature,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TG,bulk ground temperature,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TH2,POT TEMP at 2 M,K,Time south_north west_east,XLONG XLAT XTIME,float32
+THIS_IS_AN_IDEAL_RUN,T/F flag: this is an ARW ideal simulation,-,Time,,int32
+TISO,TEMP AT WHICH THE BASE T TURNS CONST,K,Time,,float32
+TLP,BASE STATE LAPSE RATE,,Time,,float32
+TLP_STRAT,BASE STATE LAPSE RATE (DT/D(LN(P)) IN STRATOSPHERE,K,Time,,float32
+TMN,SOIL TEMPERATURE AT LOWER BOUNDARY,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TRAD,surface radiative temperature,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TSK,SURFACE SKIN TEMPERATURE,K,Time south_north west_east,XLONG XLAT XTIME,float32
+TSK_FORCE,SCM ideal surface skin temperature,W m-2,Time,,float32
+TSK_FORCE_TEND,SCM ideal surface skin temperature tendency,W m-2 s-1,Time,,float32
+TSLB,SOIL TEMPERATURE,K,Time soil_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+TSNO,snow temperature,K,Time snow_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+TV,vegetation leaf temperature,K,Time south_north west_east,XLONG XLAT XTIME,float32
+Times,,,Time,,bytes8
+U,x-wind component,m s-1,Time bottom_top south_north west_east_stag,XLONG_U XLAT_U XTIME,float32
+U10,U at 10 M,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+UDROFF,UNDERGROUND RUNOFF,mm,Time south_north west_east,XLONG XLAT XTIME,float32
+UP_HELI_MAX,MAX UPDRAFT HELICITY,m2 s-2,Time south_north west_east,XLONG XLAT XTIME,float32
+USHR1,0-1km AGL U-component Wind Shear,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+USHR6,0-6km AGL U-component Wind Shear,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+UST,U* IN SIMILARITY THEORY,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+U_BUNK,U-component of Bunkers storm motion,ms-1,Time south_north west_east,XLONG XLAT XTIME,float32
+V,y-wind component,m s-1,Time bottom_top south_north_stag west_east,XLONG_V XLAT_V XTIME,float32
+V10,V at 10 M,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+VAR,OROGRAPHIC VARIANCE,,Time south_north west_east,XLONG XLAT XTIME,float32
+VAR_SSO,variance of subgrid-scale orography,m2,Time south_north west_east,XLONG XLAT XTIME,float32
+VEGFRA,VEGETATION FRACTION,,Time south_north west_east,XLONG XLAT XTIME,float32
+VSHR1,0-1km AGL V-component Wind Shear,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+VSHR6,0-6km AGL V-component Wind Shear,s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+V_BUNK,V-component of Bunkers storm motion,ms-1,Time south_north west_east,XLONG XLAT XTIME,float32
+W,z-wind component,m s-1,Time bottom_top_stag south_north west_east,XLONG XLAT XTIME,float32
+WSPD10MAX,WIND SPD MAX 10 M,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+W_DN_MAX,MAX Z-WIND DOWNDRAFT,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+W_MEAN,HOURLY MEAN Z-WIND,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+W_UP_MAX,MAX Z-WIND UPDRAFT,m s-1,Time south_north west_east,XLONG XLAT XTIME,float32
+XICEM,SEA ICE FLAG (PREVIOUS STEP),,Time south_north west_east,XLONG XLAT XTIME,float32
+XLAND,"LAND MASK (1 FOR LAND, 2 FOR WATER)",,Time south_north west_east,XLONG XLAT XTIME,float32
+XLAT,"LATITUDE, SOUTH IS NEGATIVE",degree_north,Time south_north west_east,XLONG XLAT,float32
+XLAT_U,"LATITUDE, SOUTH IS NEGATIVE",degree_north,Time south_north west_east_stag,XLONG_U XLAT_U,float32
+XLAT_V,"LATITUDE, SOUTH IS NEGATIVE",degree_north,Time south_north_stag west_east,XLONG_V XLAT_V,float32
+XLONG,"LONGITUDE, WEST IS NEGATIVE",degree_east,Time south_north west_east,XLONG XLAT,float32
+XLONG_U,"LONGITUDE, WEST IS NEGATIVE",degree_east,Time south_north west_east_stag,XLONG_U XLAT_U,float32
+XLONG_V,"LONGITUDE, WEST IS NEGATIVE",degree_east,Time south_north_stag west_east,XLONG_V XLAT_V,float32
+XTIME,minutes since 1979-10-01 00:00:00,,Time,,float32
+ZETATOP,ZETA AT MODEL TOP,,Time,,float32
+ZNU,eta values on half (mass) levels,,Time bottom_top,,float32
+ZNW,eta values on full (w) levels,,Time bottom_top_stag,,float32
+ZS,DEPTHS OF CENTERS OF SOIL LAYERS,m,Time soil_layers_stag,,float32
+ZSNSO,layer-bottom depth from snow surf,m,Time snso_layers_stag south_north west_east,XLONG XLAT XTIME,float32
+ZWT,water table depth,m,Time south_north west_east,XLONG XLAT XTIME,float32
