@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.13.8
 #   kernelspec:
 #     display_name: Python [conda env:.conda-bandit_nhgf]
 #     language: python
@@ -110,7 +110,7 @@ print(myparams[curr_param].dimensions)
 # %% [markdown]
 # #### Datatype for parameter
 
-# %%
+# %% tags=[]
 # Datatype for the parameter
 print('='*10 + f' Datatype for {curr_param} ' + '='*10)
 print(myparams[curr_param].datatype)
@@ -197,7 +197,7 @@ print(xmlstr)
 # %% [markdown]
 # ### Get parameters in xml format
 
-# %%
+# %% jupyter={"outputs_hidden": true} tags=[]
 xmlstr = minidom.parseString(xmlET.tostring(pfile.xml_global_parameters)).toprettyxml(indent='    ')
 print(xmlstr)
 
@@ -242,7 +242,7 @@ pfile.parameters.shapefile_hrus(f'{gis_dir}/HRU_subset.shp', layer_name=None, sh
 # pfile.parameters.plot('snowinfil_max', output_dir=f'{workdir}', cmap='terrain')
 
 # Display plot in notebook
-pfile.parameters.plot('snowinfil_max', cmap='terrain')
+pfile.parameters.plot('gwflow_coef', cmap='terrain')
 
 # %% [markdown]
 # ### Plot a segment parameter
@@ -252,14 +252,17 @@ pfile.parameters.shapefile_segments(f'{gis_dir}/Segments_subset.shp', layer_name
 
 # %%
 # NOTE: 2022-02-14 PAN - This doesn't work for some reason. I'll look at pyPRMS and see what's going on.
-pfile.parameters.plot('seg_width', linewidth=6.0, facecolor='snow', edgecolor='whitesmoke', 
+pfile.parameters.plot('seg_width', linewidth=1.0, facecolor='snow', edgecolor='whitesmoke', 
                       vary_color=True, vary_width=True, cmap='tab20')
 
 # %%
+pfile.parameters.plot('seg_width', linewidth=1.0, facecolor='snow', edgecolor='whitesmoke', 
+                      cmap='tab20')
 
 # %%
 
 # %%
+pfile.headers
 
 # %%
 

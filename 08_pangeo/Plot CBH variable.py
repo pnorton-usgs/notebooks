@@ -8,50 +8,49 @@
 #       format_version: '1.3'
 #       jupytext_version: 1.13.7
 #   kernelspec:
-#     display_name: Python [conda env:gis_38]
+#     display_name: Python [conda env:holoview]
 #     language: python
-#     name: conda-env-gis_38-py
+#     name: conda-env-holoview-py
 # ---
 
 # %% language="javascript"
 # IPython.notebook.kernel.restart()
 
 # %%
-import cartopy.crs as ccrs
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize, LogNorm, PowerNorm
-from matplotlib.collections import PatchCollection
-from matplotlib.patches import Polygon
-import shapely
-
 from dask.distributed import Client
 import geopandas
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pyproj as prj
-import os
-import xarray
-
-from osgeo import ogr
+import warnings
+import xarray as xr
 
 from pyPRMS.plot_helpers import set_colormap, get_projection, plot_polygon_collection
 
+warnings.filterwarnings('ignore')
 
 # %%
-client = Client(n_workers=2, threads_per_worker=2, memory_limit='1GB')
-# client = Client(processes=False)
+# Location of config information used for matplotlib
+mpl.matplotlib_fname()
+
+# %%
+client = Client()
 client
 
 # %%
-work_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/daymet_v3/tmp'
-filename = '{}/crap.nc'.format(work_dir)
+# work_dir = '/Volumes/USGS_NHM2/datasets/gridmet/gm_gf_v11_US_UNITS_filled'
+work_dir = '/Volumes/USGS_NHM2/datasets/gridmet/gm_new_ncf_filled'
 
+# work_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/daymet_v3/tmp'
+# filename = '{}/crap.nc'.format(work_dir)
 
-geofile = '/Users/pnorton/Projects/National_Hydrology_Model/Trans-boundary_HRUs/GIS/GFv1.1_nhrusim_Topology.gdb'
-layer_name = 'nhruv11_sim30'
-shape_key = 'nhru_v11'
+geofile = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/bandit/NHM_v1.1/GIS/GFv1.1.gdb'
+layer_name = 'nhru_v1_1_simp'
+shape_key = 'nhru_v1_1'
+# geofile = '/Users/pnorton/Projects/National_Hydrology_Model/Trans-boundary_HRUs/GIS/GFv1.1_nhrusim_Topology.gdb'
+# layer_name = 'nhruv11_sim30'
+# shape_key = 'nhru_v11'
 # work_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/daymet_v3_1980-01-01_2016-12-31/netcdf'
 # filename = '{}/*.nc'.format(work_dir)
 
@@ -59,7 +58,8 @@ shape_key = 'nhru_v11'
 
 # %%
 def shapefile_hrus(filename, layer_name=None):
-    '''Read a shapefile or geodatabase that corresponds to HRUs
+    '''
+    Read a shapefile or geodatabase that corresponds to HRUs
     '''
 
     hru_poly = geopandas.read_file(filename, layer=layer_name)
@@ -72,7 +72,7 @@ def shapefile_hrus(filename, layer_name=None):
     return hru_poly
 
 
-def plot_cbh(name, hru_poly, shape_key, df, time_index=None, output_dir=None):
+def plot_cbh(name, hru_poly, shape_key, df, time_index=None, output_dir=None, **kwargs):
     '''
     Plot a parameter
     '''
@@ -80,16 +80,29 @@ def plot_cbh(name, hru_poly, shape_key, df, time_index=None, output_dir=None):
     # Get extent information
     minx, miny, maxx, maxy = hru_poly.geometry.total_bounds
 
-    # Get a Pandas dataframe from the netcdf dataset for a single timestep
-    xdf_df = df[name][time_index].to_dataframe(name=name)
+    time_str = ''
 
-    # cmap, norm = set_colormap(name, param_var, min_val=cparam.minimum, max_val=cparam.maximum)
-    cmap, norm = set_colormap(name, xdf_df[name])
+    if time_index is not None:
+        # Get a Pandas dataframe from the netcdf dataset for a single timestep
+        xdf_df = df[name][time_index].to_dataframe(name=name)
+        time_str = pd.to_datetime(df['time'][time_index].values).isoformat()
+    else:
+        xdf_df = df[name].to_dataframe(name=name)
 
+    # Mask out any zero values (used for checking NEGMASK)
+    xdf_df[name] = xdf_df[name].mask(xdf_df[name] == 0)
+    
+    # cmap, norm = set_colormap(name, xdf_df[name], min_val=0.0, max_val=xdf_df.max().max(), cmap='tab20b', **kwargs)
+    cmap, norm = set_colormap(name, xdf_df[name], min_val=0.0, max_val=xdf_df[name].max(), cmap='tab20b', **kwargs)
+    # cmap, norm = set_colormap(name, xdf_df[name])
+
+    # NOTE: 2022-03-09 - using set_bad will override ANY edgecolor setting.
+    # cmap.set_bad('darkgrey', 1.0)
+    
     crs_proj = get_projection(hru_poly)
 
     # This takes care of multipolygons that are in the NHM geodatabase/shapefile
-    geoms_exploded = hru_poly.explode().reset_index(level=1, drop=True)
+    geoms_exploded = hru_poly.explode(index_parts=True).reset_index(level=1, drop=True)
 
     print('Writing first plot')
     df_mrg = geoms_exploded.merge(xdf_df[name], left_on=shape_key, right_index=True, how='left')
@@ -105,68 +118,155 @@ def plot_cbh(name, hru_poly, shape_key, df, time_index=None, output_dir=None):
     mapper.set_array(df_mrg[name])
     plt.colorbar(mapper, shrink=0.6)
 
-    time_str = pd.to_datetime(df['time'][time_index].values).isoformat()
-#     time_str = df['time'].iloc[time_index].isoformat()
-    plt.title(f'Variable: {name},  Date: {time_str}')    
-
-    col = plot_polygon_collection(ax, df_mrg.geometry, values=df_mrg[name], colormap=cmap,
-                                  norm=norm, linewidth=0.0)
+    if time_index is not None:
+        plt.title(f'Variable: {name},  Date: {time_str}')
+    else:
+        plt.title(f'Variable: {name}')
+        
+    col = plot_polygon_collection(ax, df_mrg.geometry, values=df_mrg[name],
+                                  **dict(kwargs, cmap=cmap, norm=norm))
 
     if output_dir is not None:
-#         if is_monthly:
-#             plt.savefig(f'{output_dir}/{name}_{time_index+1:02}.png', dpi=150, bbox_inches='tight')
-
-#             for tt in range(1, 12):
-#                 print(f'    Index: {tt}')
-#                 param_var = self.get_dataframe(name).iloc[:, tt].to_frame(name=name)
-#                 df_mrg = geoms_exploded.merge(xdf_df[name], left_on=shape_key, right_index=True, how='left')
-
-#                 if is_monthly:
-#                     ax.set_title(f'Variable: {name},  Month: {tt+1}')
-
-#                 col.set_array(df_mrg[name])
-#                 # fig
-#                 plt.savefig(f'{output_dir}/{name}_{tt+1:02}.png', dpi=150, bbox_inches='tight')
-#         else:
-        plt.savefig(f'{output_dir}/{name}_{time_index+1:02}.png', dpi=150, bbox_inches='tight')
+        if time_index is not None:
+            plt.savefig(f'{output_dir}/{name}_{time_index+1:02}.png', dpi=150, bbox_inches='tight')
+        else:
+            plt.savefig(f'{output_dir}/{name}.png', dpi=150, bbox_inches='tight')
 
 
 # %%
+
+# %%
 # Open the netcdf file of NHM output variables
-xdf = xarray.open_mfdataset(filename, chunks={'hruid': 1040}, combine='by_coords')
-xdf = xdf.set_index(hruid='hruid')
+xdf = xr.open_mfdataset(f'{work_dir}/*_climate_*.nc', chunks={}, combine='by_coords', parallel=True)
+xdf = xdf.assign_coords(hruid=xdf.hruid)
+# xdf = xdf.set_index(hruid='hruid')
+
+# xdf = xdf.sum(dim='time')
+
+# %%
+aa = xdf['tmax'][0].to_dataframe(name='tmax')
+aa
+
+# %%
+aa['tmax'].max()
+
+# %%
+xdf
+
+# %%
+xdf['tmax'].loc[dict(time=slice('2000-01-01', '2000-01-02'), hruid=96751)].values
+
+# %%
 
 # %%
 hru_poly = shapefile_hrus(geofile, layer_name=layer_name)
 
 # %%
-plot_cbh('tmax', hru_poly, shape_key, xdf, time_index=365, output_dir='/Users/pnorton/tmp')
+plot_cbh('tmax', hru_poly, shape_key, xdf, time_index=0, edgecolor='none', linewidth=0.0)
 
 # %%
-# # %%timeit -n1 -r1
-# a = None
-# 12.8 s - mostly taken up by the min/max of the variable data
-# 1:05 - no dask
-#  :56.7 - with dask 2w2t1G
 
-# NOTE: dim changed from nhru to hru
-# Get the min and max values for the variable
-max_val = xdf[the_var].max(dim='time').max(dim='hru').values
-min_val = xdf[the_var].min(dim='time').min(dim='hru').values
+# %%
+# %%time
+xdf = xr.open_mfdataset(f'{work_dir}/*_climate_*.nc', chunks={}, combine='by_coords', parallel=True)
+xdf = xdf.assign_coords(hruid=xdf.hruid)
 
-# norm = PowerNorm(gamma=0.05)
-# norm = LogNorm(vmin=min_val, vmax=max_val)
+# Create a mask; 1 = (tmax < tmin), 0 - otherwise
+xdf['NEGMASK'] = xdf.tmax < xdf.tmin
 
-if min_val == 0.:
-    if the_var in ['net_ppt', 'net_rain', 'net_snow', 'prcp']:
-        cmap.set_under(color='None')
-        norm = LogNorm(vmin=0.000001, vmax=max_val)
-    else:
-        norm = Normalize(vmin=0.000001, vmax=max_val)
-else:
-    if the_var in ['tmax_hru', 'tmin_hru', 'tmax', 'tmin']:
-        norm = Normalize(vmin=-max_val, vmax=max_val)
-    else:
-        norm = Normalize(vmin=min_val, vmax=max_val)
+xdf = xdf.drop_vars(['hru_lat', 'hru_lon', 'prcp', 'rhavg', 'rhmax', 'rhmin', 'ws', 'tmax', 'tmin'])
+
+# Sum the mask values
+xdf = xdf.sum(dim='time')
+xdf
+
+# %%
+
+# %%
+# %%time
+xdf.load()
+
+# %%
+
+# %%
+
+# %%
+hru_poly = shapefile_hrus(geofile, layer_name=layer_name)
+
+# %%
+plot_cbh('NEGMASK', hru_poly, shape_key, xdf, edgecolor='none', linewidth=0.0)
+# plot_cbh('NEGMASK', hru_poly, shape_key, xdf, time_index=360) # , output_dir='/Users/pnorton/tmp')
+
+# %%
+xdf.NEGMASK.plot.hist(bins=[1,2,5,10])
+
+# %%
+
+# %%
+
+# %%
+
+# %% [markdown]
+# ## Load time-series of occurrences of tmax < tmin
+
+# %%
+# %%time
+xdf_ts = xr.open_mfdataset(f'{work_dir}/gm_climate_*.nc', chunks={}, combine='by_coords', parallel=True)
+xdf_ts = xdf_ts.assign_coords(hruid=xdf_ts.hruid)
+
+# Create a mask; 1 = (tmax < tmin), 0 - otherwise
+xdf_ts['NEGMASK'] = xdf_ts.tmax < xdf_ts.tmin
+
+xdf_ts = xdf_ts.drop_vars(['hru_lat', 'hru_lon', 'prcp', 'rhavg', 'rhmax', 'rhmin', 'ws', 'tmax', 'tmin'])
+
+# Sum the mask values
+# xdf = xdf.sum(dim='time')
+xdf_ts.load()
+
+# %% [markdown]
+# ## Get list of hruid where NEGMASK is greater than a threshold
+
+# %%
+# %%time
+# Get the hruids where NEGMASK is greater than a threshold
+thold = 10
+
+neg_hrus = np.argwhere(xdf.NEGMASK.values > thold)
+df_hrus = xdf.isel(hruid=neg_hrus[:,0])
+
+gt_thold_hruid = df_hrus.hruid.values
+
+print(f'Number of HRUs with at least {thold} occurrences of tmax > tmin: {gt_thold_hruid.size}')
+
+# %% [markdown]
+# ## Plot NEGMASK for a particular hruid
+
+# %%
+# %%time
+chru = 102314
+xdf_ts.NEGMASK.sel(hruid=chru).plot()
+
+print(f'Number of occurrences (tmax > tmin): {xdf_ts.NEGMASK.sel(hruid=chru).sum().values}')
+
+# %%
+aa = xdf_ts.where(xdf_ts.NEGMASK > 0.0, drop=True)
+
+# %%
+aa
+
+# %% tags=[]
+# Print out the dates where tmax < tmin
+for xx in aa.time.dt.strftime('%Y-%m-%d'):
+    print(xx.values)
+
+# %%
+
+
+
+# %%
+
+# %%
+
+# %%
 
 # %%

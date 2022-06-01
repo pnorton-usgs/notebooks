@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.13.8
 #   kernelspec:
 #     display_name: Python [conda env:gis_38]
 #     language: python
@@ -25,6 +25,16 @@ try:
     import xml.etree.cElementTree as xmlET
 except ImportError:
     import xml.etree.ElementTree as xmlET
+
+
+# %%
+def version_info(version_str, delim='.'):
+    
+    if version_str is None:
+        return [0, 0, 0]
+    
+    flds = [int(kk) for kk in version_str.split(delim)]
+    return flds
 
 
 # %%
@@ -80,19 +90,16 @@ ctl_names.sort()
 # %%
 control.keys()
 
-
 # %%
-def version_info(version_str, delim='.'):
-    
-    if version_str is None:
-        return [0, 0, 0]
-    
-    flds = [int(kk) for kk in version_str.split(delim)]
-    return flds
-    
-    
+control['selectDatesFileName']
 
 # %%
 version_info('5.1.0')
+
+# %%
+
+# %%
+
+# %%
 
 # %%

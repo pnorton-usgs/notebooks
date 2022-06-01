@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.13.8
 #   kernelspec:
 #     display_name: Python [conda env:.conda-bandit_nhgf]
 #     language: python
@@ -192,7 +192,6 @@ lon = xdf.XLONG.values
 
 lcc = ccrs.LambertConformal(globe=globe, central_longitude=262.1, central_latitude=39.1,
                             standard_parallels=[30.0, 50.0])
-
 
 # First, transform from LCC to Orthographic
 transform = lcc.transform_points(ccrs.Orthographic(265,25), lon, lat)

@@ -20,10 +20,10 @@ import datetime
 import os
 import re
 import shutil
-import subprocess
+# import subprocess
 import numpy as np
 import prms_lib as prms
-reload(prms)
+# reload(prms)
 
 
 # %%
@@ -41,7 +41,7 @@ basinConfigFile = 'basin.cfg'
 config = ConfigParser.SafeConfigParser()
 config.read(configfile)
 
-print os.getcwd()
+print(os.getcwd())
 #print config.options('Paths')
 
 # %% [markdown]
@@ -111,33 +111,33 @@ interval = config.get('ObjFcns', 'interval').split(',')
 
 # %%
 # Could do testing of config parameters to make sure everything exists
-print '\n','-'*5, 'Dates', '-'*5
-print '  start_date_model:', start_date_model
-print 'start_date (calib):', start_date
-print '          end_date:', end_date
-print '\n','-'*5,'Paths','-'*5
-print '      base_dir:', base_dir
-print 'base_calib_dir:', base_calib_dir
-print '  template_dir:', template_dir
-print 'PRMS control subdirectory:', prms_control_sub
-print '  PRMS input subdirectory:', prms_input_sub
-print ' PRMS output subdirectory:', prms_output_sub
-print '\n','-'*5, 'Files', '-'*5
-print '  input parameter file:', prms_input_file
-print 'control parameter file:', prms_control_file
-print '           basins_file:', basins_file
-print '      param_range_file:', param_range_file
-print ' test_func_margin_file:', test_func_margin_file
-print '  calibration log file:', log_file
-print '\n','-'*5, 'Scripts', '-'*5
-print '      mocom executable:', mocom_cmd
-print '       prms executable:', prms_cmd
-print 'calibration run script:', calib_run
-print '\n','-'*5, 'Calibration settings', '-'*5
-print 'nstart:', nstart
-print ' nsets:', nsets
-print 'nparam:', nparam
-print 'ntests:', ntests
+print('\n', '-' * 5, 'Dates', '-' * 5)
+print('  start_date_model:', start_date_model)
+print('start_date (calib):', start_date)
+print('          end_date:', end_date)
+print('\n', '-' * 5, 'Paths', '-' * 5)
+print('      base_dir:', base_dir)
+print('base_calib_dir:', base_calib_dir)
+print('  template_dir:', template_dir)
+print('PRMS control subdirectory:', prms_control_sub)
+print('  PRMS input subdirectory:', prms_input_sub)
+print(' PRMS output subdirectory:', prms_output_sub)
+print('\n', '-' * 5, 'Files', '-' * 5)
+print('  input parameter file:', prms_input_file)
+print('control parameter file:', prms_control_file)
+print('           basins_file:', basins_file)
+print('      param_range_file:', param_range_file)
+print(' test_func_margin_file:', test_func_margin_file)
+print('  calibration log file:', log_file)
+print('\n', '-' * 5, 'Scripts', '-' * 5)
+print('      mocom executable:', mocom_cmd)
+print('       prms executable:', prms_cmd)
+print('calibration run script:', calib_run)
+print('\n', '-' * 5, 'Calibration settings', '-' * 5)
+print('nstart:', nstart)
+print(' nsets:', nsets)
+print('nparam:', nparam)
+print('ntests:', ntests)
 
 # %% [markdown]
 # <b>If necessary create basins_file from special lookup file</b>

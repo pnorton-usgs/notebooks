@@ -53,7 +53,7 @@ vars_model_accum = ['ACLWDNB', 'ACLWDNBC', 'ACLWDNT', 'ACLWDNTC', 'ACLWUPB', 'AC
                     'ACSWDNTC', 'ACSWUPB', 'ACSWUPBC', 'ACSWUPT', 'ACSWUPTC']
 
 
-# %%
+# %% jupyter={"outputs_hidden": true} tags=[]
 # Read word map file for processing the description strings
 fhdl = open('wrfout_words.txt', 'r', encoding='ascii')
 rawdata = fhdl.read().splitlines()
@@ -133,7 +133,7 @@ for vv in list(df.keys()):
 #             cvar_cnk = []
 #             for xx in src_cvar.dims:
 
-# %%
+# %% jupyter={"outputs_hidden": true} tags=[]
 wrfout_vars
 
 # %%
@@ -155,7 +155,7 @@ word_df.to_csv('wrfout_words.csv', sep='\t')
 
 # %%
 
-# %%
+# %% jupyter={"outputs_hidden": true} tags=[]
 fhdl = open('wrfout_words.txt', 'r', encoding='ascii')
 rawdata = fhdl.read().splitlines()
 fhdl.close()
@@ -169,7 +169,7 @@ for row in it:
     if len(flds[2]) != 0:
         word_map[flds[0].replace('"', '')] = flds[2].replace('"', '')
     print(flds)
-    
+
 
 # %%
 word_map['LATITUDE,']

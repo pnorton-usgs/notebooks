@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.13.8
 #   kernelspec:
 #     display_name: Python [conda env:.conda-bandit_nhgf]
 #     language: python
@@ -29,12 +29,13 @@ from pyPRMS.ControlFile import ControlFile
 # workdir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/bandit/jobs/20210312_red_river'
 # control_file = '{}/control.default.bandit'.format(workdir)
 # control_file = '/Users/pnorton/notes/bandit_default_stuff/control.default'
-control_file = '/Users/pnorton/tmp/prms_chk/4551/control.default.bandit'
+# control_file = '/Users/pnorton/tmp/prms_chk/4551/control.default.bandit'
+control_file = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/bandit/jobs/control.default'
 
 # %%
 ctl = ControlFile(control_file, verbose=True)
 
-# %% [markdown]
+# %% [markdown] tags=[]
 # ### List modules defined in control file
 
 # %%
@@ -57,6 +58,13 @@ print(stdate)
 ww = ctl.get('prms_warmup').values
 print(f'prms_warmup: {ww}')
 
+
+# %%
+
+# %%
+ctl.write('crap.control')
+
+# %%
 
 # %%
 nhru_prefix = ctl.get('nhruOutBaseFileName').values

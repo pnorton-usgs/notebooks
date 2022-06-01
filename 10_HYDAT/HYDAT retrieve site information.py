@@ -17,11 +17,14 @@
 # IPython.notebook.kernel.restart()
 
 # %%
+import netCDF4 as nc
+import numpy as np
 import pandas as pd
 import sqlite3
 
 # %%
-src_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/HYDAT'
+src_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/HYDAT/20220502_update'
+# src_dir = '/Users/pnorton/Projects/National_Hydrology_Model/datasets/HYDAT'
 src_db = f'{src_dir}/Hydat.sqlite3'
 
 # %%
@@ -114,7 +117,39 @@ df2
 df2[df2['PROV_TERR_STATE_LOC'] == 'QC']
 
 # %%
-df2['poi_name'].tolist()
+poiname_list = df2['poi_name'].tolist()
+
+# %%
+nc.stringtochar(np.array(poiname_list).astype('S'))
+
+# %%
+type(poiname_list)
+
+# %%
+poiname_list[0]
+
+# %%
+poiname_list[0].encode('latin-1')
+
+# %%
+ascii(poiname_list[0])
+
+# %%
+import unicodedata
+
+# %%
+# Produce ASCII output without multibyte unicode characters
+poiname_list_norm = [unicodedata.normalize('NFKD', aa).encode('ascii', 'ignore') for aa in poiname_list]
+
+# unicodedata.normalize('NFKD', poiname_list[0]).encode('ascii', 'ignore')
+
+# %%
+nc.stringtochar(np.array(poiname_list_norm).astype('S'))
+# poiname_list_norm
+
+# %%
+
+# %%
 
 # %%
 df2.to_csv(f'{src_dir}/hydat_sites.tab', sep='\t')

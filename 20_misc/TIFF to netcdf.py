@@ -37,6 +37,7 @@ warnings.filterwarnings('ignore')
 cvar = 'prcp'   # One of prcp, tavg
 
 # Location of TIFF files
+# There should be 12 monthly files
 work_dir = '/Users/pnorton/tmp/20220214_mike'
 
 # Path to output netcdf file
@@ -172,7 +173,7 @@ global_attrs = dict(title=f'30-year (1990-2019) Monthly Averages of DAYMET {str_
 
 for kk, vv in global_attrs.items():
     ds.attrs[kk] = vv
-    
+
 
 # %%
 ds
