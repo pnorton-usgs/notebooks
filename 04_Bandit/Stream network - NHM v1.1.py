@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.13.7
+#       jupytext_version: 1.13.8
 #   kernelspec:
 #     display_name: Python [conda env:bandit]
 #     language: python
@@ -263,7 +263,7 @@ print("Is a DAG: {}".format(nx.is_directed_acyclic_graph(dag_streamnet)))
 print("Isolate nodes:")
 print(list(nx.isolates(dag_streamnet)))
 
-# %%
+# %% jupyter={"outputs_hidden": true} tags=[]
 check_for_disconnected_graphs(dag_streamnet)
 
 # %%
@@ -342,7 +342,7 @@ for nhm_node, tb_node in tb_in.items():
 #     dag_streamnet.nodes[nhm_node]['style'] = 'filled'    
 #     dag_streamnet.nodes[nhm_node]['fillcolor'] = 'purple'
 #     dag_streamnet.add_edge(tb_node, nhm_node)
-    
+
 
 # %%
 check_for_disconnected_graphs(dag_streamnet)
