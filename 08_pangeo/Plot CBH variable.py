@@ -58,9 +58,9 @@ shape_key = 'nhru_v1_1'
 
 # %%
 def shapefile_hrus(filename, layer_name=None):
-    '''
+    """
     Read a shapefile or geodatabase that corresponds to HRUs
-    '''
+    """
 
     hru_poly = geopandas.read_file(filename, layer=layer_name)
 
@@ -73,9 +73,9 @@ def shapefile_hrus(filename, layer_name=None):
 
 
 def plot_cbh(name, hru_poly, shape_key, df, time_index=None, output_dir=None, **kwargs):
-    '''
+    """
     Plot a parameter
-    '''
+    """
     
     # Get extent information
     minx, miny, maxx, maxy = hru_poly.geometry.total_bounds
@@ -198,7 +198,7 @@ plot_cbh('NEGMASK', hru_poly, shape_key, xdf, edgecolor='none', linewidth=0.0)
 # plot_cbh('NEGMASK', hru_poly, shape_key, xdf, time_index=360) # , output_dir='/Users/pnorton/tmp')
 
 # %%
-xdf.NEGMASK.plot.hist(bins=[1,2,5,10])
+xdf.NEGMASK.plot.hist(bins=[1, 2, 5, 10])
 
 # %%
 
@@ -232,7 +232,7 @@ xdf_ts.load()
 thold = 10
 
 neg_hrus = np.argwhere(xdf.NEGMASK.values > thold)
-df_hrus = xdf.isel(hruid=neg_hrus[:,0])
+df_hrus = xdf.isel(hruid=neg_hrus[:, 0])
 
 gt_thold_hruid = df_hrus.hruid.values
 
